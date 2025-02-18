@@ -1,6 +1,122 @@
+@font-face {
+    font-family: 'Figtree';
+    src: url('/assets/fonts/static/Figtree-Medium.ttf') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('/assets/fonts/static/Figtree-ExtraBold.ttf') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
 :root {
     --yellow: #F4D04E;
     --white: #FFFFFF;
     --gray-500: #6B6B6B;
     --gray-950: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--yellow);
+    font-family: 'Figtree', sans-serif;
+    display: grid;
+    min-block-size: 100vh;
+    place-items: center;
+    color: var(--gray-950);
+    padding: 4px;
+}
+
+img {
+    inline-size: 100%;
+    block-size: auto;
+}
+
+
+.main-container {
+    background-color: var(--white);
+    padding: 24px;
+    max-inline-size: 384px;
+    border: 1px solid var(--gray-950);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    border-radius: 20px;
+    max-block-size: 522px;
+    box-shadow: 8px 8px;
+}
+
+.blog-img {
+    border-radius: 10px;
+    block-size: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.main-container__content {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.main-container__category {
+    background-color: var(--yellow);
+    padding-inline: 12px;
+    padding-block: 4px;
+    border-radius: 4px;
+    font-weight: 800;
+    line-height: 1.5;
+    max-inline-size: 82px;
+    max-block-size: 29px;
+    font-size: clamp(12px, 6px + 1.5vw, 14px);
+}
+
+.main-container__publish-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    block-size: 21px;
+    font-size: clamp(12px, 6px + 1.5vw, 14px);
+
+}
+
+.main-container__title {
+    font-size: clamp(20px, 10px + 2.75vw, 24px);
+    line-height: 1.5;
+}
+
+.main-container__title:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.main-container__description {
+    font-size: clamp(14px, 7px + 1.75vw , 16px);
+    line-height: 1.5;
+    color: var(--gray-500);
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author__img {
+    inline-size: 32px;
+    block-size: 32px;
+}
+
+.author__name {
+    font-size: clamp(14px, 7px + 1.75vw , 16px);
+    font-weight: 800;
 }
